@@ -22,6 +22,8 @@
     btop
     yazi
     gh
+    lazygit
+    nyancat
   ];
 
 
