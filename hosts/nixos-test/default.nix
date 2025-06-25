@@ -11,7 +11,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos-test"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Set your time zone.
@@ -67,20 +67,7 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-  programs.zsh.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  environment.systemPackages = with pkgs; [
-   vim 
-   wget
-   neovim
-  ];
 
-  system.stateVersion = "24.11";
-
+  system.stateVersion = "25.05";
 }

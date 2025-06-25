@@ -18,12 +18,12 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
-	nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+	nixos-test = nixpkgs.lib.nixosSystem {
 	   system = "x86_64-linux";
 	   specialArgs = { inherit inputs; };
 	   modules = [
-	     ./configuration.nix
-	     ./sysconfigs
+	     ./hosts/nixos-test
+	     ./modules
 	     home-manager.nixosModules.home-manager{
 	       home-manager.useGlobalPkgs = true;
 	       home-manager.useUserPackages = true;
