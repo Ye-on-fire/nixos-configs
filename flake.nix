@@ -25,6 +25,7 @@
 	   specialArgs = { inherit inputs; };
 	   modules = [
 	     ./hosts/nixos-test
+	     ./users/makoto.nix
 	     ./modules
 	     home-manager.nixosModules.home-manager{
 	       home-manager.useGlobalPkgs = true;
