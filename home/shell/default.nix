@@ -2,6 +2,7 @@
   imports = [
     ./zsh.nix
     ./starship.nix
+    ./fzf.nix
   ];
 
   #define environment variables

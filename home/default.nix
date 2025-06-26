@@ -5,6 +5,7 @@
     ./shell
     ./ides
     ./cli
+    ./terminals
   ];
   # specialArgs = { inherit inputs; };
   home.username = "makoto";
