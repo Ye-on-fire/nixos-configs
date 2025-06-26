@@ -22,6 +22,7 @@
     btop
     yazi
     gh
+    fd
     lazygit
     nyancat
   ];
