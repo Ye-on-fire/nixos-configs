@@ -1,10 +1,10 @@
 { config, pkgs, ... }:
-
 {
   imports = [
     ./shell
     ./ides
-    ./cli
+    ./cli-apps
+    ./desktop-environments
     ./terminals
   ];
   # specialArgs = { inherit inputs; };
