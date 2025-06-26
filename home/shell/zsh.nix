@@ -4,5 +4,8 @@
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
+    envExtra = ''
+      export EDITOR=nvim
+    '';
   };
 }

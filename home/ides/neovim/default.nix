@@ -1,7 +1,11 @@
 { config, pkgs, ...}:
 {
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  imports = [
+    ./nixvim.nix
+  ];
+
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  # };
 }
