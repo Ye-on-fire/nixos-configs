@@ -11,13 +11,13 @@
     };
     #include the nixvim flake
     #accesss it with inputs.nixvim.nixosModules.nixvim
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: 
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }: 
   {
     nixosConfigurations = {
 	nixos-test = nixpkgs.lib.nixosSystem {
@@ -30,7 +30,12 @@
 	     home-manager.nixosModules.home-manager{
 	       home-manager.useGlobalPkgs = true;
 	       home-manager.useUserPackages = true;
-	       home-manager.users.makoto = import ./home;
+	       home-manager.users.makoto = {
+	         imports = [
+		   ./home
+		   nixvim.homeManagerModules.nixvim
+		 ];
+	       };
 	       home-manager.extraSpecialArgs = inputs;
 	     }
 	   ];
