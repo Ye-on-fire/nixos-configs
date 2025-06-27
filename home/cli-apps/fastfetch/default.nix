@@ -44,9 +44,9 @@
           keyColor = "yellow";
         }
         {
-          key = "   term font";
+          key = "   font";
           type = "terminalfont";
-          keyColor = "white";
+          keyColor = "red";
         }
         {
           key = "    DE";
