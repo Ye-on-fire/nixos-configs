@@ -4,6 +4,6 @@
     ./git.nix
     ./zoxide.nix
     ./yazi.nix
-    ./fastfetch.nix
+    ./fastfetch
   ];
 }

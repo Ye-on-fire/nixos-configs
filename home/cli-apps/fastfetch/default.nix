@@ -1,13 +1,11 @@
 {
+  home.file.".config/fastfetch/nix-logo.png".source = ./nix-logo.png;
   programs.fastfetch = {
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
-        padding = {
-          top = 4;
-          left = 3;
-        };
+        source = "~/.config/fastfetch/nix-logo.png";
+        height = 16;
       };
 
       display = {
@@ -46,6 +44,16 @@
           keyColor = "yellow";
         }
         {
+          key = "   term font";
+          type = "terminalfont";
+          keyColor = "white";
+        }
+        {
+          key = "    DE";
+          type = "de";
+          keyColor = "blue";
+        }
+        {
           key = "    WM";
           type = "wm";
           keyColor = "red";
@@ -82,6 +90,11 @@
           type = "localip";
           format = "{1} ({4})";
           keyColor = "red";
+        }
+        {
+          key = "  󰅐 Datetime";
+          type = "datetime";
+          keyColor = "white";
         }
         {
           key = "╰──────────────────────────────────────────────╯";
