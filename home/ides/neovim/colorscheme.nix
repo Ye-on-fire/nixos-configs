@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-    programs.nixvim.colorschemes={
-      gruvbox-material.enable = true;
-    };
+  programs.nixvim.colorschemes={
+    gruvbox-material.enable = true;
+  };
 }

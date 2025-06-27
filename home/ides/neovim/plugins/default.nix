@@ -1,7 +1,11 @@
 {...}:
 {
   imports = [
+    ./whichkey.nix
     ./cmp.nix
+    ./notify.nix
+    ./others.nix
+    ./toggleterm.nix
     ./lsp.nix
     ./flash.nix
     ./bufferline.nix

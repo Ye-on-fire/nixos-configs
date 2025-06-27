@@ -1,3 +1,4 @@
+{self,...}:
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
@@ -24,7 +25,18 @@
       };
     };
     servers={
-      nixd.enable = true;
+      # nixd = {
+      #   enable = true;
+      #   settings = {
+      #     options = {
+      #       nixos.expr = "(builtins.getFlake (builtins.toString ../../../../.)).nixosConfigurations.nixos-test.options";
+      #       home-manager.expr = "(builtins.getFlake (builtins.toString ../../../../.)).nixosConfigurations.nixos-test.options.home-manager.users.type.getSubOptions []";
+      #     };
+      #   };
+      # };
+      nil_ls={
+        enable = true;
+      };
       lua_ls.enable = true;
     };
   };

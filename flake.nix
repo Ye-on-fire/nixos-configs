@@ -32,9 +32,9 @@
 	       home-manager.useUserPackages = true;
 	       home-manager.users.makoto = {
 	         imports = [
-		   ./home
-		   nixvim.homeManagerModules.nixvim
-		 ];
+             ./home
+             nixvim.homeManagerModules.nixvim
+           ];
 	       };
 	       home-manager.extraSpecialArgs = inputs;
 	     }

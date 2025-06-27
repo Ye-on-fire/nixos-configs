@@ -15,6 +15,62 @@
       mode = "n";
       options.desc = "no hightlight";
     }
+    # Terminal
+    {
+      key = "<Leader>tn";
+      action = "<cmd> tabnew | terminal <CR>";
+      mode = "n";
+      options = {
+        silent = true;
+        desc = "New tab terminal";
+      };
+    }
+
+    {
+      key = "<Leader>th";
+      action = "<cmd> ToggleTerm direction=horizontal <CR>";
+      mode = "n";
+      options = {
+        silent = true;
+        desc = "Horizontal terminal";
+      };
+    }
+
+    {
+      key = "<Leader>tv";
+      action = "<cmd>ToggleTerm direction=vertical size=60 <CR>";
+      mode = "n";
+      options = {
+        silent = true;
+        desc = "Vertical terminal";
+      };
+    }
+
+    {
+      key = "<Leader>tf";
+      action = "<cmd> ToggleTerm direction=float <CR>";
+      mode = "n";
+      options = {
+        silent = true;
+        desc = "Floating terminal";
+      };
+    }
+
+    #window split
+    {
+      key = "|";
+      action = "<cmd> vsp <CR>";
+      mode = "n";
+      options.desc = "split vertical";
+    }
+
+    {
+      key = "\\";
+      action = "<cmd> sp <CR>";
+      mode = "n";
+      options.desc = "split horizontal";
+    }
+
     # Window movement
     {
       key = "<C-j>";
@@ -98,7 +154,7 @@
     {
       key = "s";
       action = "<cmd> lua require(\"flash\").jump() <CR>";
-      mode = "n";
+      mode = ["n" "v"];
       options.desc = "flash jump";
     }
   ];
