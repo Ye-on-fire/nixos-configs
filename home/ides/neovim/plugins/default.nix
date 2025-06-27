@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{...}:
 {
   imports = [
     ./cmp.nix
@@ -7,5 +7,7 @@
     ./lualine.nix
     ./telescope.nix
     ./treesitter.nix
+    ./neotree.nix
+    ./autopairs.nix
   ];
 }
