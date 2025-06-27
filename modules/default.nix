@@ -5,5 +5,6 @@
     ./fonts.nix
     ./gnome.nix
     ./pipewire.nix
+    ./locale.nix
   ];
 }

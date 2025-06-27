@@ -1,11 +1,12 @@
 { config, pkgs, ...}:
 {
   imports = [
-    ./nixvim.nix
+    ./colorscheme.nix
+    ./options.nix
+    ./plugins
   ];
-
-  # programs.neovim = {
-  #   enable = true;
-  #   defaultEditor = true;
-  # };
+  programs.nixvim = {
+    enable = true;
+    clipboard.providers.wl-copy.enable = true;
+  };
 }
