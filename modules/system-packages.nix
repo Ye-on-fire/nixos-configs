@@ -1,5 +1,7 @@
 { config, pkgs, ...}:
 {
+  #set subsititue
+  nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   programs.git.enable = true;
