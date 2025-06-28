@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -6,6 +6,9 @@
       mhutchie.git-graph
       jnoortheen.nix-ide
       sainnhe.gruvbox-material
+      brettm12345.nixfmt-vscode
+      yzhang.markdown-all-in-one
+      arrterian.nix-env-selector
     ];
   };
 }

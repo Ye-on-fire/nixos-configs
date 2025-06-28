@@ -6,15 +6,23 @@
       key = "jj";
       action = "<esc>";
       mode = "i";
-      options.desc = "exit insert mode";
+      options.desc = "Exit insert mode";
     }
 
     {
-      key = "<Leader>nh";
+      key = "<Leader>n";
       action = "<cmd>nohl<CR>";
       mode = "n";
-      options.desc = "no hightlight";
+      options.desc = "No highlight";
     }
+
+    {
+      key = "<Leader>h";
+      action = "<cmd>Alpha<CR>";
+      mode = "n";
+      options.desc = "Return to Home";
+    }
+
     # Terminal
     {
       key = "<Leader>tn";
@@ -121,12 +129,22 @@
       };
     }
 
+    {
+      key = "<Leader>x";
+      action = ":bd <CR>";
+      mode = "n";
+      options = {
+        silent = true;
+        desc = "Delete current buffer";
+      };
+    }
+
     #Neotree
     {
       key = "<Leader>e";
       action = "<cmd> Neotree toggle <CR>";
       mode = "n";
-      options.desc = "toggle tree";
+      options.desc = "Toggle Tree";
     }
     
     #telescope
@@ -134,21 +152,21 @@
       key = "<Leader>ff";
       action = "<cmd> Telescope fd <CR>";
       mode = "n";
-      options.desc = "telescope find file";
+      options.desc = "Telescope find file";
     }
 
     {
       key = "<Leader>fw";
       action = "<cmd> Telescope live_grep <CR>";
       mode = "n";
-      options.desc = "telescope find word";
+      options.desc = "Telescope find word";
     }
 
     {
       key = "<Leader>fb";
       action = "<cmd> Telescope buffers <CR>";
       mode = "n";
-      options.desc = "telescope find buffer";
+      options.desc = "Telescope find buffer";
     }
     #flash.nvim
     {

@@ -3,6 +3,7 @@
   imports = [
     ./whichkey.nix
     ./cmp.nix
+    ./dashboard.nix
     ./notify.nix
     ./others.nix
     ./toggleterm.nix
