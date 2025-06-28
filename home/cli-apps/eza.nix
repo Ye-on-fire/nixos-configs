@@ -1,5 +1,5 @@
 {
-  programs.starship = {
+  programs.eza = {
     enable = true;
     enableZshIntegration = true;
   };

@@ -1,4 +1,3 @@
-{config, ...}:
 {
   programs.zsh = {
     enable = true;
@@ -11,10 +10,6 @@
       up = "sudo nixos-rebuild switch";
       dup = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
       clg = "sudo nix-collect-garbage -d";
-      ls = "eza --icons";
     };
-    # envExtra = ''
-    #   export EDITOR=nvim
-    # '';
   };
 }
