@@ -9,6 +9,7 @@
       brettm12345.nixfmt-vscode
       yzhang.markdown-all-in-one
       arrterian.nix-env-selector
+      asvetliakov.vscode-neovim
     ];
   };
 }
