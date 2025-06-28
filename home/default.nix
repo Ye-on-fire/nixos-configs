@@ -6,6 +6,7 @@
     ./cli-apps
     ./desktop-environments
     ./terminals
+    ./stylix
   ];
   # specialArgs = { inherit inputs; };
   home.username = "makoto";

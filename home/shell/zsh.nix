@@ -6,6 +6,9 @@
     sessionVariables = {
       EDITOR = "nvim";
     };
+    envExtra = ''
+      export EDITOR="nvim"
+    '';
     shellAliases = {
       up = "sudo nixos-rebuild switch";
       dup = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
