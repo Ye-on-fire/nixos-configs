@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ inputs, pkgs, ...}:
 {
   #set subsititue
   nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
@@ -10,8 +10,9 @@
   programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
-   vim 
-   wget
-   neovim
+    vim 
+    wget
+    neovim
+    inputs.zen-browser.packages."${system}".default
   ];
 }

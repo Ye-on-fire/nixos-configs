@@ -1,7 +1,8 @@
 { config, pkgs, ...}:
 {
   imports = [
-    ./colorscheme.nix
+    #unused color scheme
+    # ./colorscheme.nix
     ./options.nix
     ./keymaps.nix
     ./plugins
