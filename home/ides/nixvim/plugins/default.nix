@@ -4,6 +4,7 @@
     ./whichkey.nix
     ./cmp.nix
     ./dashboard.nix
+    ./none-ls.nix
     ./notify.nix
     ./others.nix
     ./toggleterm.nix

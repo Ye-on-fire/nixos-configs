@@ -1,8 +1,6 @@
 {
   programs.nixvim.plugins.blink-cmp = {
     enable = true;
-    settings.keymap = {
-      preset = "enter";
-    };
+    settings.keymap = { preset = "enter"; };
   };
 }

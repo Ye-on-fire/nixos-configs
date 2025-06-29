@@ -1,5 +1,4 @@
-{self,...}:
-{
+{ ... }: {
   programs.nixvim.plugins.lsp = {
     enable = true;
     inlayHints = true;
@@ -24,7 +23,7 @@
         "<leader>wa" = "add_workspace_folder";
       };
     };
-    servers={
+    servers = {
       # nixd = {
       #   enable = true;
       #   settings = {
@@ -34,9 +33,7 @@
       #     };
       #   };
       # };
-      nil_ls={
-        enable = true;
-      };
+      nil_ls = { enable = true; };
       lua_ls.enable = true;
     };
   };

@@ -10,6 +10,7 @@
       smartindent = true;
       autoindent = true;
       clipboard = "unnamedplus";
+      laststatus = 0;
     };
   };
 }

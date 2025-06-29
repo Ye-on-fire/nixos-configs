@@ -27,8 +27,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }: 
-  {
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }: {
     nixosConfigurations = {
       nixos-test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -36,16 +35,14 @@
         modules = [
           ./hosts/nixos-test
           ./users/makoto.nix
-          ./modules
-          home-manager.nixosModules.home-manager{
+          ./modules/nixos
+          home-manager.nixosModules.home-manager
+          {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.makoto = {
-              imports = [
-                ./home
-                nixvim.homeModules.nixvim
-                stylix.homeModules.stylix
-              ];
+              imports =
+                [ ./home nixvim.homeModules.nixvim stylix.homeModules.stylix ];
             };
             home-manager.extraSpecialArgs = inputs;
           }

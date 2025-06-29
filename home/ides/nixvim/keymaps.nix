@@ -146,7 +146,7 @@
       mode = "n";
       options.desc = "Toggle Tree";
     }
-    
+
     #telescope
     {
       key = "<Leader>ff";
@@ -171,8 +171,8 @@
     #flash.nvim
     {
       key = "s";
-      action = "<cmd> lua require(\"flash\").jump() <CR>";
-      mode = ["n" "v"];
+      action = ''<cmd> lua require("flash").jump() <CR>'';
+      mode = [ "n" "v" ];
       options.desc = "flash jump";
     }
   ];
