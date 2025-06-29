@@ -1,4 +1,4 @@
-{
+{ ... }: {
   imports = [
     ./system-packages.nix
     ./fcitx5.nix
@@ -6,5 +6,6 @@
     ./gnome.nix
     ./pipewire.nix
     ./locale.nix
+    ./hyprland.nix
   ];
 }
