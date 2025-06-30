@@ -175,5 +175,12 @@
       mode = [ "n" "v" ];
       options.desc = "flash jump";
     }
+    #lazygit
+    {
+      key = "<Leader>lg";
+      action = "<cmd>LazyGit<CR>";
+      mode = [ "n" ];
+      options.desc = "Open Lazygit";
+    }
   ];
 }

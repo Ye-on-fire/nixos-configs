@@ -20,6 +20,11 @@
           group = "Telescope";
           icon = " ";
         }
+        {
+          __unkeyed-1 = "<Leader>l";
+          group = "Lazygit";
+          icon = " ";
+        }
       ];
     };
   };

@@ -2,6 +2,7 @@
 {
   imports = [
     ./whichkey.nix
+    ./lazygit.nix
     ./cmp.nix
     ./dashboard.nix
     ./none-ls.nix
