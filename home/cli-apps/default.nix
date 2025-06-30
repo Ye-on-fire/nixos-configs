@@ -1,5 +1,4 @@
-{ config, pkgs, ...}:
-{
+{ ... }: {
   imports = [
     ./eza.nix
     ./git.nix

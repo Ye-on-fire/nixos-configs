@@ -13,6 +13,7 @@
     vim 
     wget
     neovim
+    git
     inputs.zen-browser.packages."${system}".default
   ];
 }
