@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   imports =
     [ ./shell ./ides ./cli-apps ./desktop-environments ./terminals ./stylix ];
   # specialArgs = { inherit inputs; };

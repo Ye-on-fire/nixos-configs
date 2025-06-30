@@ -1,4 +1,5 @@
 { ... }: {
+  imports = [ ./keybindings.nix ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd = {
