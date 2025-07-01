@@ -27,6 +27,7 @@
       "iina"
       "google-chrome"
       "clion"
+      "zen"
       "obsidian"
       "steam"
       "the-unarchiver"
