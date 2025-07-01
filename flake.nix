@@ -4,6 +4,11 @@
   inputs = {
     #select the unstable release
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    #include nix-darwin for macos management
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     #include home-manager
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -27,7 +32,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }: {
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim, stylix, ... }: {
     nixosConfigurations = {
       nixos-test = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -47,6 +52,14 @@
             home-manager.extraSpecialArgs = inputs;
           }
         ];
+      };
+    };
+
+    darwinConfigurations = {
+      "makotos-iMac-Pro" = nix-darwin.lib.darwinSystem {
+        system = "x86_64-darwin";
+        specialArgs = { inherit inputs; };
+        modules = [ ./hosts/makotos-iMac-Pro ./modules/darwin ];
       };
     };
   };
