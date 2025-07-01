@@ -13,7 +13,6 @@
   home.packages = with pkgs; [
     ripgrep
     neovim
-    eza
     fzf
     starship
     fastfetch
