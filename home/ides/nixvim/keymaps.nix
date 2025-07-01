@@ -1,3 +1,4 @@
+{ ... }:
 {
   programs.nixvim.globals.mapleader = " ";
   programs.nixvim.keymaps = [

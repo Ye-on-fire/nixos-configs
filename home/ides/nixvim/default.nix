@@ -1,5 +1,4 @@
-{ config, pkgs, ...}:
-{
+{ ... }: {
   imports = [
     #unused color scheme
     # ./colorscheme.nix
