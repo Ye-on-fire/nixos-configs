@@ -1,6 +1,4 @@
-{ config, pkgs, ... }:
-
-{
+{ ... }: {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -18,6 +16,7 @@
   services.printing.enable = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [ "root" "makoto" ];
 
   system.stateVersion = "25.05";
 }
