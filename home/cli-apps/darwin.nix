@@ -5,6 +5,6 @@
     ./cava.nix
     ./zoxide.nix
     ./yazi.nix
-    ./fastfetch
+    ./fastfetch/darwin.nix
   ];
 }
