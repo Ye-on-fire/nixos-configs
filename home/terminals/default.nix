@@ -1,1 +1,1 @@
-{ ... }: { imports = [ ./kitty.nix ./foot.nix]; }
+{ ... }: { imports = [ ./kitty ./foot.nix]; }

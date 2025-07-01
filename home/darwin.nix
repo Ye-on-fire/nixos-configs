@@ -3,6 +3,7 @@
     [ 
       ./shell/darwin.nix
       ./cli-apps/darwin.nix
+      ./ides/darwin.nix
     ];
   home.username = "makoto";
   home.homeDirectory = "/Users/makoto";
@@ -12,7 +13,6 @@
   # environment.
   home.packages = with pkgs; [
     ripgrep
-    neovim
     fzf
     starship
     fastfetch
