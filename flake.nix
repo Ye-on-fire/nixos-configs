@@ -59,7 +59,21 @@
       "makotos-iMac-Pro" = nix-darwin.lib.darwinSystem {
         system = "x86_64-darwin";
         specialArgs = { inherit inputs; };
-        modules = [ ./hosts/makotos-iMac-Pro ./modules/darwin ];
+        modules = [
+          ./hosts/makotos-iMac-Pro
+          ./users/makoto-darwin.nix
+          ./modules/darwin
+          home-manager.darwinModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.makoto = {
+              imports =
+                [ ./home/darwin.nix ];
+            };
+            home-manager.extraSpecialArgs = inputs;
+          }
+        ];
       };
     };
   };

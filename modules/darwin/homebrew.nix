@@ -13,13 +13,8 @@
     };
     #packages
     brews = [
-      "neovim"
-      "starship"
       "blueutil"
-      "yazi"
       "sleepwatcher"
-      "eza"
-      "fzf"
     ];
     casks = [
       "kitty"
