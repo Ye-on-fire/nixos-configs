@@ -4,6 +4,7 @@
       ./shell/darwin.nix
       ./cli-apps/darwin.nix
       ./ides/darwin.nix
+      ./terminals/darwin.nix
     ];
   home.username = "makoto";
   home.homeDirectory = "/Users/makoto";

@@ -1,4 +1,4 @@
 { ... }:
 {
-  imports = [ ./neovim ];
+  imports = [ ./neovim ./neovide/darwin.nix ];
 }

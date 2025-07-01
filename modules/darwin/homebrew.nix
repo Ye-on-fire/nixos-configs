@@ -17,8 +17,8 @@
       "sleepwatcher"
     ];
     casks = [
-      "kitty"
-      "neovide-app"
+      # "kitty"
+      # "neovide-app"
       "iina"
       "google-chrome"
       "clion"
