@@ -5,7 +5,9 @@
     settings = {
       logo = {
         source = "~/.config/fastfetch/nix-logo.png";
-        height = 16;
+        width = 35;
+        # height = 16;
+        type = "kitty-direct";
       };
 
       display = {

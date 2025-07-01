@@ -1,6 +1,9 @@
 { pkgs, ... }: {
   imports =
-    [ ./shell/darwin.nix];
+    [ 
+      ./shell/darwin.nix
+      ./cli-apps/darwin.nix
+    ];
   home.username = "makoto";
   home.homeDirectory = "/Users/makoto";
   home.stateVersion = "25.05"; # Please read the comment before changing.
