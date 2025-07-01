@@ -1,3 +1,4 @@
+{ lib ,...}:
 {
   programs.zsh = {
     enable = true;
@@ -9,7 +10,7 @@
     envExtra = ''
       export EDITOR="nvim"
     '';
-    shellAliases = {
+    shellAliases = lib.mkDefault {
       up = "sudo nixos-rebuild switch";
       dup = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
       clg = "sudo nix-collect-garbage -d";

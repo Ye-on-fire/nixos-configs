@@ -1,7 +1,6 @@
 { pkgs, ... }: {
-  # imports =
-  #   [ ./shell ./ides ./cli-apps ./desktop-environments ./terminals ./stylix ];
-  # specialArgs = { inherit inputs; };
+  imports =
+    [ ./shell/darwin.nix];
   home.username = "makoto";
   home.homeDirectory = "/Users/makoto";
   home.stateVersion = "25.05"; # Please read the comment before changing.
