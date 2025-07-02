@@ -1,6 +1,13 @@
 { pkgs, ... }: {
-  imports =
-    [ ./shell ./ides ./cli-apps ./desktop-environments ./terminals ./stylix ];
+  imports = [
+    ./shell
+    ./ides
+    ./cli-apps
+    ./gui-apps
+    ./desktop-environments
+    ./terminals
+    ./stylix
+  ];
   # specialArgs = { inherit inputs; };
   home.username = "makoto";
   home.homeDirectory = "/home/makoto";

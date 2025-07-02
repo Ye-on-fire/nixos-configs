@@ -1,7 +1,7 @@
-{ inputs, pkgs, ...}:
-{
+{ pkgs, ... }: {
   #set subsititue
-  nix.settings.substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+  nix.settings.substituters =
+    [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   programs.git.enable = true;
@@ -9,12 +9,5 @@
   programs.firefox.enable = true;
   programs.zsh.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    mihomo-party
-    vim 
-    wget
-    neovim
-    git
-    inputs.zen-browser.packages."${system}".default
-  ];
+  environment.systemPackages = with pkgs; [ mihomo-party vim wget neovim git ];
 }

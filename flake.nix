@@ -27,56 +27,58 @@
     };
     #zen-browser
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim, stylix, ... }: {
-    nixosConfigurations = {
-      nixos-test = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/nixos-test
-          ./users/makoto.nix
-          ./modules/nixos
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.makoto = {
-              imports =
-                [ ./home nixvim.homeModules.nixvim stylix.homeModules.stylix ];
-            };
-            home-manager.extraSpecialArgs = inputs;
-          }
-        ];
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim, stylix
+    , zen-browser, ... }: {
+      nixosConfigurations = {
+        nixos-test = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/nixos-test
+            ./users/makoto.nix
+            ./modules/nixos
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.makoto = {
+                imports = [
+                  ./home
+                  nixvim.homeModules.nixvim
+                  stylix.homeModules.stylix
+                  zen-browser.homeModules.beta
+                ];
+              };
+              home-manager.extraSpecialArgs = inputs;
+            }
+          ];
+        };
       };
-    };
 
-    darwinConfigurations = {
-      "makotos-iMac-Pro" = nix-darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/makotos-iMac-Pro
-          ./users/makoto-darwin.nix
-          ./modules/darwin
-          home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.makoto = {
-              imports =
-                [ ./home/darwin.nix ];
-            };
-            home-manager.extraSpecialArgs = inputs;
-          }
-        ];
+      darwinConfigurations = {
+        "makotos-iMac-Pro" = nix-darwin.lib.darwinSystem {
+          system = "x86_64-darwin";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/makotos-iMac-Pro
+            ./users/makoto-darwin.nix
+            ./modules/darwin
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.makoto = { imports = [ ./home/darwin.nix ]; };
+              home-manager.extraSpecialArgs = inputs;
+            }
+          ];
+        };
       };
     };
-  };
 }
