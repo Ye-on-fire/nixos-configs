@@ -12,6 +12,7 @@
       asvetliakov.vscode-neovim
       llvm-vs-code-extensions.vscode-clangd
       ms-vscode.cmake-tools
+      ms-python.python
     ];
   };
 }
