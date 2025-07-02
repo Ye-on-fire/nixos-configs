@@ -24,9 +24,8 @@
       };
     };
     servers = {
-      nixd = {
-        enable = true;
-      };
+      nixd = { enable = true; };
+      basedpyright.enable = true;
       # nil_ls = { enable = true; };
       lua_ls.enable = true;
     };

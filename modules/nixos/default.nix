@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./environments.nix
     ./system-packages.nix
     ./fcitx5.nix
     ./fonts.nix
