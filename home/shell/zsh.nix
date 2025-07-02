@@ -1,19 +1,17 @@
-{ lib ,...}:
-{
+{ ... }: {
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
     autosuggestion.enable = true;
-    sessionVariables = {
-      EDITOR = "nvim";
-    };
+    sessionVariables = { EDITOR = "nvim"; };
     envExtra = ''
       export EDITOR="nvim"
     '';
-    shellAliases = lib.mkDefault {
-      up = "sudo nixos-rebuild switch";
-      dup = "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
-      clg = "sudo nix-collect-garbage -d";
+    shellAliases = {
+      rebuild = "sudo nixos-rebuild switch";
+      upgrade =
+        "nix flake update --flake /etc/nixos && sudo nixos-rebuild switch";
+      clgarbage = "sudo nix-collect-garbage -d";
     };
   };
 }

@@ -1,6 +1,6 @@
-{ config, ... }:{
+{ ... }:{
   imports = [
-    ./zsh-darwin.nix
+    ./zsh/darwin.nix
     ./starship.nix
     ./fzf.nix
   ];

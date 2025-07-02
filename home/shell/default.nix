@@ -1,12 +1,6 @@
-{ config, ... }:{
-  imports = [
-    ./zsh.nix
-    ./starship.nix
-    ./fzf.nix
-  ];
+{ ... }: {
+  imports = [ ./zsh ./starship.nix ./fzf.nix ];
 
   #define environment variables
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 }
