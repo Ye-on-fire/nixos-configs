@@ -22,6 +22,8 @@
     fd
     lazygit
     nyancat
+    devenv
+    uv
   ];
 
   # Let Home Manager install and manage itself.

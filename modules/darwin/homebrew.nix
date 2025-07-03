@@ -1,4 +1,6 @@
 { ... }:{
+  #Should first install homebrew with the following command
+  #/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   homebrew = {
     #options
     enable = true;
@@ -13,15 +15,16 @@
     };
     #packages
     brews = [
+      "node"
+      "rustup"
       "blueutil"
       "sleepwatcher"
     ];
     casks = [
-      # "kitty"
-      # "neovide-app"
       "iina"
       "google-chrome"
       "clion"
+      "visual-studio-code"
       "zen"
       "obsidian"
       "steam"

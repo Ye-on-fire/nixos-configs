@@ -3,6 +3,7 @@
     ./zsh/darwin.nix
     ./starship.nix
     ./fzf.nix
+    ./direnv.nix
   ];
 
   #define environment variables
