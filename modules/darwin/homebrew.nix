@@ -22,6 +22,7 @@
     ];
     casks = [
       "iina"
+      "cmake-app"
       "google-chrome"
       "clion"
       "visual-studio-code"
