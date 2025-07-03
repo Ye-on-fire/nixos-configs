@@ -1,4 +1,4 @@
 { ... }: {
-  imports = [ ./settings.nix ./aliases-darwin.nix ];
+  imports = [ ./env-darwin.nix ./settings.nix ./aliases-darwin.nix ];
   programs.zsh = { enable = true; };
 }
