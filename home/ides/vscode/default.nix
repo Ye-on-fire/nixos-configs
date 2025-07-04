@@ -8,11 +8,11 @@
       brettm12345.nixfmt-vscode
       yzhang.markdown-all-in-one
       formulahendry.code-runner
-      arrterian.nix-env-selector
-      asvetliakov.vscode-neovim
+      vscodevim.vim
       llvm-vs-code-extensions.vscode-clangd
       ms-vscode.cmake-tools
       ms-python.python
+      mkhl.direnv
     ];
   };
 }

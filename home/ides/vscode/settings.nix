@@ -1,5 +1,7 @@
 { ... }: {
   programs.vscode.profiles.default.userSettings = {
+    #disable update
+    "update.mode" = "none";
     #editor
     "editor.cursorSmoothCaretAnimation" = "on";
     "editor.smoothScrolling" = true;
@@ -21,11 +23,6 @@
     "terminal.integrated.smoothScrolling" = true;
 
     #extensions
-    #vscode-neovim
-    "extensions.experimental.affinity" = { "asvetliakov.vscode-neovim" = 1; };
-    "vscode-neovim.compositeKeys" = {
-      "jj" = { "command" = "vscode-neovim.escape"; };
-    };
     #git graph
     "git.confirmSync" = false;
     "git.enableSmartCommit" = true;
@@ -41,5 +38,22 @@
     };
     #cmake
     "cmake.options.statusBarVisibility" = "compact";
+
+    #vscodevim
+    "extensions.experimental.affinity" = { "vscodevim.vim" = 1; };
+    "vim.easymotion" = true;
+    "vim.insearch" = true;
+    "vim.useSystemClipboard" = true;
+    "vim.useCtrlKeys" = true;
+    "vim.hlSearch" = true;
+    "vim.leader" = "<Space>";
+    "vim.insertModeKeyBindings" = [{
+      "before" = [ "j" "j" ];
+      "after" = [ "<Esc>" ];
+    }];
+    "vim.normalModeKeyBindingsNonRecursive" = [{
+      "before" = [ "<leader>" "n" ];
+      "after" = [ ":nohl" ];
+    }];
   };
 }
