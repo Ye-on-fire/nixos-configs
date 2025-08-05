@@ -4,6 +4,7 @@
     ./zen.nix
     ./fonts.nix
     ./cava.nix
+    ./cursor.nix
   ];
   stylix.enable = true;
   # stylix.targets.gnome.enable = false;
