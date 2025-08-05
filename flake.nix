@@ -21,10 +21,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     #stylix
-    stylix = {
-      url = "github:danth/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # stylix = {
+    #   url = "github:danth/stylix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     #zen-browser
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
@@ -32,7 +32,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim, stylix
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, nixvim
     , zen-browser, ... }: {
       nixosConfigurations = {
         nixos-test = nixpkgs.lib.nixosSystem {
@@ -51,7 +51,6 @@
                 imports = [
                   ./home
                   nixvim.homeModules.nixvim
-                  stylix.homeModules.stylix
                   zen-browser.homeModules.beta
                 ];
               };
@@ -75,7 +74,6 @@
                 imports = [
                   ./home
                   nixvim.homeModules.nixvim
-                  stylix.homeModules.stylix
                   zen-browser.homeModules.beta
                 ];
               };

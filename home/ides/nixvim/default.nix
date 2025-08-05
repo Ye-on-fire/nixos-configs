@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     #unused color scheme
-    # ./colorscheme.nix
+    ./colorscheme.nix
     ./options.nix
     ./keymaps.nix
     ./plugins
