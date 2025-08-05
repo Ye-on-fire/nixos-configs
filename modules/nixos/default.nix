@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./clash.nix
     ./environments.nix
     ./system-packages.nix
     ./fcitx5.nix

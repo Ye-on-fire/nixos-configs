@@ -9,5 +9,5 @@
   programs.firefox.enable = true;
   programs.zsh.enable = true;
 
-  environment.systemPackages = with pkgs; [ mihomo-party vim wget neovim git ];
+  environment.systemPackages = with pkgs; [ vim wget neovim git ];
 }

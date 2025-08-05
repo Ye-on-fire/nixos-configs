@@ -1,10 +1,13 @@
 { ... }: {
   programs.zsh = {
-    syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
-    envExtra = ''
-      export EDITOR="nvim"
-      export PATH="$PATH:$HOME/.cargo/bin"
-    '';
+    antidote = {
+      enable = true;
+      plugins = [
+        "Aloxaf/fzf-tab"
+        "zsh-users/zsh-autosuggestions"
+        "zsh-users/zsh-syntax-highlighting"
+        "zsh-users/zsh-completions"
+      ];
+    };
   };
 }
