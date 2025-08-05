@@ -18,7 +18,7 @@
       name = "Noto Color Emoji";
     };
     sizes = {
-      terminal = 18;
+      terminal = 15;
     };
   };
 }

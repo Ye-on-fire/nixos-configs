@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
+    ./zen.nix
     ./fonts.nix
     ./cava.nix
   ];

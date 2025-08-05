@@ -4,7 +4,7 @@
     ./git.nix
     ./cava.nix
     ./zoxide.nix
-    ./yazi.nix
+    ./yazi
     ./fastfetch/darwin.nix
   ];
 }
