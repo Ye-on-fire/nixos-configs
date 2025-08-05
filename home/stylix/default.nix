@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./zen.nix
+    ./disabled.nix
     ./fonts.nix
     ./cava.nix
     ./cursor.nix
