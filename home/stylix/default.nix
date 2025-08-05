@@ -5,6 +5,7 @@
     ./fonts.nix
     ./cava.nix
     ./cursor.nix
+    ./waybar.nix
   ];
   stylix.enable = true;
   # stylix.targets.gnome.enable = false;
