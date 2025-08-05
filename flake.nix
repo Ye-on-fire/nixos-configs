@@ -59,6 +59,30 @@
             }
           ];
         };
+        shen-nixos = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/shen-nixos
+            ./users/makoto.nix
+            ./modules/nixos
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.backupFileExtension = "backup";
+              home-manager.users.makoto = {
+                imports = [
+                  ./home
+                  nixvim.homeModules.nixvim
+                  stylix.homeModules.stylix
+                  zen-browser.homeModules.beta
+                ];
+              };
+              home-manager.extraSpecialArgs = inputs;
+            }
+          ];
+        };
       };
 
       darwinConfigurations = {
