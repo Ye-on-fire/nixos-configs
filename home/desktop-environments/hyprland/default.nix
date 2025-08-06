@@ -1,5 +1,5 @@
 { ... }: {
-  imports = [ ./keybindings.nix ./general.nix ./waybar ./swww.nix ];
+  imports = [ ./execs.nix ./keybindings.nix ./general.nix ./hyprpanel.nix ./swww.nix ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd = {
